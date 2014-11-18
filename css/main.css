@@ -1,11 +1,8 @@
-/* READ: http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx
-     
-     http://www.colorcombos.com/color-schemes/5475/ColorCombo5475.html
-
-*/
-
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
+@import url(http://fonts.googleapis.com/css?family=Miss+Fajardose);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(http://fonts.googleapis.com/css?family=Playball);
 
 * {
   box-sizing: border-box;
@@ -29,17 +26,20 @@ h4 {
 }
 
 h1 {
-  font: 4.5em "Droid Serif", sans-serif;
-  padding: 1.7em .5em .65em;
-  text-transform: uppercase;
+  font: 12.5vw "Miss Fajardose", sans-serif;
+/*  padding: 25vh 1vw 20vh; */
+  padding-top: 25vh;
+  padding-bottom: 20vh;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 h2 {
-  font-size: 2.1em;
+  font-size: 2vw;
   font-weight: 400;
   font-family: 'Droid Serif', serif;
-  padding-bottom: 2.5em;
-  text-transform: uppercase;
+  font-variant: small-caps;
+  padding-bottom: 1vh;
 }
 
 h3 {
@@ -100,14 +100,14 @@ a {
 }
 
 #header {
-  background: #E3493B url(../img/h.jpg) no-repeat center center / cover;
+  background: #00628B url(../img/bg_blur.jpg) no-repeat center center / cover;
   color: #fff;
   display: table;
-  height: 100%;
+/*  height: 100%; */
   height: 100vh;
   margin: 0 auto;
   overflow: hidden;
-  padding-bottom: 4em;
+  padding-bottom: 4vh; 
   text-align: center;
   width: 100%;
 }
@@ -131,59 +131,26 @@ a {
 
   .header__social__link {
     border: 0;
-    color: #fff;
     display: inline-block;
-    font-size: 1.825em;
-    padding: 7px 0;
+    max-width: 4vw;    
+    max-height: 4vw;
+    margin: 1.25vw;
+    opacity: 0.8;
+    overflow: hidden;
     position: relative;
-    text-transform: uppercase;
-    -webkit-transition: all .15s ease-in-out;
-       -moz-transition: all .15s ease-in-out;
-            transition: all .15s ease-in-out;
-    width: 150px;
+    -webkit-transition: all .3s;
+       -moz-transition: all .3s;
+            transition: all .3s;
+    width: 100%;
   }
 
-    @media only screen and (max-width: 650px) {
-      .header__social__link {
-        margin: 10px auto;
-        display: block;
-      }
-    }
-
-    .header__social__link::before {
-      top: 0;
-      -webkit-transform: translateY(-10px);
-         -moz-transform: translateY(-10px);
-              transform: translateY(-10px);
-    }
-
-    .header__social__link::after {
-      bottom: 0;
-      -webkit-transform: translateY(10px);
-         -moz-transform: translateY(10px);
-              transform: translateY(10px);
-    }
-
-    .header__social__link::before,
-    .header__social__link::after {
-      background: #fff;
-      content: '';
-      height: 1px;
-      left: 0;
-      opacity: 0;
-      position: absolute;
-      -webkit-transition: opacity .3s, -webkit-transform .3s;
-         -moz-transition: opacity .3s, -moz-transform .3s;
-              transition: opacity .3s, transform .3s;
-      width: 100%;
-    }
-
-    .header__social__link:hover::before,
-    .header__social__link:hover::after {
+    .header__social__link:hover {
       opacity: 1;
-      -webkit-transform: translateY(0);
-         -moz-transform: translateY(0);
-              transform: translateY(0);
+    }
+
+    .header__social__link img {
+      height: auto;
+      width: 100%;
     }
 
   #header__more {
@@ -244,7 +211,8 @@ a {
   .portfolio__shot {
     border: 0;
     display: inline-block;
-    height: auto;
+    height: 100%;
+    vertical-align: middle;
     margin: 0.25em;
     max-width: 250px;
     opacity: 0.7;
@@ -277,6 +245,8 @@ a {
          -moz-transition: all .15s ease-in;
               transition: all .15s ease-in;
       width: 100%;
+      height: auto;
+      vertical-align: top;
     }
 
       .portfolio__shot span p:nth-child(2) {
@@ -306,8 +276,10 @@ a {
   .companies__shot {
     border: 0;
     display: inline-block;
-    height: auto;
+    height: 100%;
+    vertical-align: middle;
     margin: 0.25em;
+    max-width: 250px;
     max-width: 250px;
     opacity: 0.7;
     overflow: hidden;
@@ -334,11 +306,13 @@ a {
       font-size: 0.85em;
       left: 0;
       padding: 10px 0;
-      position: absolute;
+      position: relative;
       -webkit-transition: all .15s ease-in;
          -moz-transition: all .15s ease-in;
               transition: all .15s ease-in;
       width: 100%;
+      height: auto;
+      vertical-align: top;
     }
 
       .companies__shot span p:nth-child(2) {
